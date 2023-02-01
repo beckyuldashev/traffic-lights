@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: wheat;
+  font-family: sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.switch-lights {
+  border: 0;
+  padding: 0.5em;
+  background-color: rgb(42, 114, 156);
+  color: #fff;
+  cursor: pointer;
+}
+
+.traffic-lights {
+  width: 120px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #1b1b1b;
+  position: relative;
+}
+
+.traffic-lights::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  width: 30px;
+  height: 80px;
+  background-color: #1b1b1b;
+}
+
+.traffic-light {
+  width: 80px;
+  height: 80px;
+  background-color: #3d3939;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.traffic-light--red.active {
+  background-color: red;
+}
+
+.traffic-light--yellow.active {
+  background-color: yellow;
+}
+
+.traffic-light--green.active {
+  background-color: green;
+}
